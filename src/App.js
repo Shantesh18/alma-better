@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import Community from './Components/Community/Community';
+import Feed from './Components/Feed/Feed';
+import Footer from './Components/Footer';
+import Doubts from './Components/FullStack/Doubts';
+import Navbar from './Components/Navbar';
+import Fullstack from './Components/FullStack/Fullstack';
 
 function App() {
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <Router>
+    <Navbar/> 
+    <Routes>
+      <Route path='/' element={<Feed/>}></Route>
+      <Route path='/community' element={<Community/>}></Route>
+      <Route path='/full-stack-webdevolopment' element={<Fullstack/>}></Route>
+    </Routes>
+    <Footer/>
+   </Router>
+   
+
+
+   {/* 
+    <Doubts/>
+    <Community/> */}
+
+   
+   </>
   );
 }
 

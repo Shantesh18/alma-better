@@ -1,0 +1,4 @@
+.comment-cards:hover{
+   transition: all .7s;
+   transform: scale(1.05);
+}

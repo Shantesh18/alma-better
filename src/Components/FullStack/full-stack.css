@@ -1,0 +1,12 @@
+.polygon-div{
+    height: 300px;
+    width: 80%;
+    position: absolute;
+    right: -300px;
+    background-color: rgb(248, 221, 221);
+    transform: rotate(130deg);
+    overflow: hidden;
+    z-index: -5;
+    clip-path: polygon( 32% 100%, 0% 0%, 100% 0%, 100% 100%);
+    border-radius: 0px 20px 20px 0;
+}
